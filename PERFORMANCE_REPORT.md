@@ -37,7 +37,7 @@ Before benchmarking, the following were added to the baseline schema to allow fa
 > [!IMPORTANT]
 > SF8 total is dominated by Q20 (~109s) and Q21 (~75s), which involve multi-level correlated subqueries that cannot be fully resolved by simple B-Tree indexes.
 
-![Total Time vs Scale Factor](file:///C:/Users/ABHINAV/.gemini/antigravity/brain/53dc2f53-60c8-4346-bbc4-fff56a14bcd6/total_time_vs_scale.png)
+![Total Time vs Scale Factor](plots/total_time_vs_scale.png)
 
 ---
 
@@ -70,7 +70,7 @@ Before benchmarking, the following were added to the baseline schema to allow fa
 
 *\*Q2 SF1 mean includes 2 pre-optimisation warm-up runs captured in the raw data. Post-index runs are 0.20–0.48s.*
 
-![Per Query vs Scale Factor](file:///C:/Users/ABHINAV/.gemini/antigravity/brain/53dc2f53-60c8-4346-bbc4-fff56a14bcd6/per_query_vs_scale.png)
+![Per Query vs Scale Factor](plots/per_query_vs_scale.png)
 
 ---
 
@@ -87,7 +87,7 @@ Ideal linear scaling would mean: doubling the scale factor doubles query time.
 > [!NOTE]
 > SF4→SF8 shows super-linear degradation, primarily caused by Q20 and Q21 which scale poorly due to complex correlated subqueries that spill to disk at SF8 data volumes.
 
-![Scaling Efficiency](file:///C:/Users/ABHINAV/.gemini/antigravity/brain/53dc2f53-60c8-4346-bbc4-fff56a14bcd6/scaling_efficiency.png)
+![Scaling Efficiency](plots/scaling_efficiency.png)
 
 ---
 
